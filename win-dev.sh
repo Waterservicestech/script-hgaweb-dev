@@ -1,23 +1,21 @@
 #!/bin/bash
-# GIT_BASH="/c/Program Files/Git/git-bash.exe"
-# dir="/c/Users/vinicius.dalanora/Projetos/hgaweb"
- 
- 
-# # Caminho para o executável do Git Bash
- 
-# # Comandos para iniciar cada serviço
-# proxyreverse="cd $dir/proxyreverse-hgaweb-services && docker-compose up --build"
-# multilangcore="cd $dir/multilangcore-hgaweb-services && yarn dev"
-# auth="cd $dir/auth-hgaweb-services && yarn dev"
-# tenant="cd $dir/tenant-hgaweb-services && yarn dev"
- 
-# # Abre cada comando em uma nova janela do Git Bash
-# cmd.exe /C start "$GIT_BASH" -c "$proxyreverse; exec bash"
-# cmd.exe /C start "$GIT_BASH" -c "$multilangcore; exec bash"
-# cmd.exe /C start "$GIT_BASH" -c "$auth; exec bash"
-# cmd.exe /C start "$GIT_BASH" -c "$tenant; exec bash"
 
-#comando para rodar
+GIT_BASH="/c/Program Files/Git/git-bash.exe"
+DIR="/d/Projetos/Waterservicestech/hgaweb"
+
+YARN_INSTALL="yarn"
+YARN_RUN="yarn dev"
+
+# Comandos para iniciar cada serviço
+proxyreverse="cd $DIR/proxyreverse-hgaweb-services; docker-compose up --build"
+multilangcore="cd $DIR/multilangcore-hgaweb-services; $YARN_INSTALL; $YARN_RUN"
+auth="cd $DIR/auth-hgaweb-services; $YARN_INSTALL; $YARN_RUN"
+tenant="cd $DIR/tenant-hgaweb-services; $YARN_INSTALL; $YARN_RUN"
+ 
+# Abre cada comando em uma nova janela do Git Bash
+start bash -c "$proxyreverse; exec bash"
+start bash -c "$multilangcore; exec bash"
+start bash -c "$auth; exec bash"
+start bash -c "$tenant; exec bash"
+
 #chmod +x win-dev.sh
-
-#./win-dev.sh
