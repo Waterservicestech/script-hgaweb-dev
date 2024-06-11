@@ -1,6 +1,7 @@
 #!/bin/bash
 
-dir="/Users/joaomarcos/Projetos/Waterservicestech/hgaweb"
+dir="/c/Users/vinicius.dalanora/Projetos/hgaweb"
+
 
 proxyreverse="cd $dir/proxyreverse-hgaweb-services && docker-compose up --build"
 multilangcore="cd $dir/multilangcore-hgaweb-services && yarn dev"
