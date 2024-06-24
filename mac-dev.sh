@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir="/c/Users/vinicius.dalanora/Projetos/hgaweb"
+dir="/Users/joaomarcos/Projetos/Waterservicestech/hgaweb"
 
 
 proxyreverse="cd $dir/proxyreverse-hgaweb-services && docker-compose up --build"
