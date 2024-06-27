@@ -12,6 +12,9 @@ multilangcore="cd $DIR/multilangcore-hgaweb-services; $YARN_INSTALL; $YARN_RUN"
 auth="cd $DIR/auth-hgaweb-services; $YARN_INSTALL; $YARN_RUN"
 tenant="cd $DIR/tenant-hgaweb-services; $YARN_INSTALL; $YARN_RUN"
 pages="cd $DIR/pages-hgaweb-services; $YARN_INSTALL; $YARN_RUN"
+web="cd $DIR/web-hgaweb-frontend; $YARN_INSTALL; $YARN_RUN"
+widgets="cd $DIR/widgets-hgaweb-services; $YARN_INSTALL; $YARN_RUN"
+
 
  
 # Abre cada comando em uma nova janela do Git Bash
@@ -20,6 +23,9 @@ start bash -c "$multilangcore; exec bash"
 start bash -c "$auth; exec bash"
 start bash -c "$tenant; exec bash"
 start bash -c "$pages; exec bash"
+start bash -c "$web; exec bash"
+start bash -c "$widgets; exec bash"
+
 
 
 #chmod +x win-dev.sh
